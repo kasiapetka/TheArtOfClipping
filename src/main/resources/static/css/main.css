@@ -1,0 +1,152 @@
+body
+{
+	margin: 0;
+	color: 	#000000;
+	font-family: 'Poiret One', serif;
+	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+	background-image: url("bg.png");
+	background-size: cover;
+	min-height: 600px;
+	background-attachment: fixed;
+}
+
+h1
+{
+	font-size: calc(40px + (70 - 40) * ((100vw - 300px) / (1600 - 300)));
+	width:80%;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-align: center;
+	letter-spacing:  5px;
+	margin: 10px auto 0px;
+	border-radius: 15px;
+	background: #FFFFFF;
+}
+
+h2{
+	font-size: calc(17px + (30 - 17) * ((100vw - 300px) / (1600 - 300)));
+	text-align: center;
+	letter-spacing:  1px;
+	margin-bottom:0px;
+	margin-top:2px;
+}
+
+h3{
+	font-size: calc(15px + (24 - 15) * ((100vw - 300px) / (1600 - 300)));
+	text-align: center;
+	letter-spacing:  1px;
+	margin-top:2px;
+}
+
+p
+{
+	border-radius: 15px;
+	background: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing:  2px;
+	margin: 15px auto 20px;
+	width: 50%;
+}
+a:hover {
+	color: #454545;
+	text-decoration: blink;
+	font-weight: bold;
+}
+a:link {
+	text-decoration: none;
+	color: black;
+}
+a:visited {
+	color: black;
+}
+
+.jumbo{
+	background-image: url("jumbo.jpg");
+	background-size: cover;
+	min-height: 500px;
+	background-attachment: fixed;
+}
+
+.accountButton
+{
+	background-color: #E9EBEE;
+	border: 1px solid #747474;
+	filter: brightness(95%);
+	border-radius: 10px;
+	color: black;
+}
+
+.accountButton:hover
+{
+	filter: brightness(100%);
+	border: 1px solid #c3c5c8;
+}
+
+.mainContainer
+{
+	max-width: 800px;
+	min-height: 400px;
+	max-height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 10px;
+}
+
+.buttonsContainer
+{
+	padding-bottom: 15px;
+	min-height: 100px;
+}
+
+.typeButton
+{
+	width: 40%;
+	max-height: 60px;
+	background-color: #E9EBEE;
+	border: 2px solid #747474;
+	border-radius: 15px;
+	filter: brightness(95%);
+	cursor: pointer;
+	text-align: center;
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-left: 15px;
+	font-weight: bold;
+	color: black;
+}
+
+.typeButton:hover{
+	filter: brightness(100%);
+	border: 2px solid #c3c5c8;
+}
+
+.services
+{
+	width: 100%;
+	height:80%;
+}
+
+.invisible{
+	display:none;
+}
+
+/*table*/
+.my-custom-scrollbar {
+	position: relative;
+	max-height: 300px;
+	overflow: auto;
+}
+.table-wrapper-scroll-y {
+	display: block;
+}
+
+.award{
+	margin-right: auto;
+	margin-left: 15%;
+	height:  calc(100px + (250 - 100) * ((100vw - 300px) / (1600 - 300)));
+	width:  calc(150px + (300 - 150) * ((100vw - 300px) / (1600 - 300)));
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="../../../static/img/scissors.ico" type="image/x-icon" th:href="@{../../img/scissors.ico}"/>
+
+    <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Bootstrap 4.4.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../../static/css/clientStyles.css" th:href="@{../../css/clientStyles.css}">
+
+    <title> The art of clipping salon. </title>
+</head>
+
+<body>
+<header>
+    <!––navigation bar for the page––>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
+        <a class="navbar-brand" href="/"><img src="../../../static/img/scissors.png" width="30" height="30"
+                                              class="d-inline-block align-top" alt="" th:src="@{../../img/scissors.png}">
+            AoCSalon</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon pull-left"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/about">About</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <a class="btn btn-secondary pull-right accountButton" href="/user">
+                <h3><i class="fa fa-user-circle-o" aria-hidden="true"></i>Account</h3>
+            </a>
+
+        </div>
+    </nav>
+</header>
+
+<form th:object="${user}" th:action="@{/admin/register}" method="post">
+    </br>
+    <div class="container mainContainer">
+        <i class="fa fa-user-circle-o" aria-hidden="true" style="margin-top: 10px; font-size:22px;"></i>
+        </br>
+        <h2> Create an account for a hairdresser. </h2>
+        <div class="form-group">
+            <label for="inputName"><h1>Name</h1></label>
+            <input type="text" class="form-control" th:field="*{name}" id="inputName" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="inputSurname"><h1>Surname</h1></label>
+            <input type="text" class="form-control" th:field="*{surname}" id="inputSurname" placeholder="Surname">
+        </div>
+
+        <div class="form-group">
+            <label for="inputEmail"><h1>Email</h1></label>
+            <input type="email" class="form-control" th:field="*{email}" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword"><h1>Password</h1></label>
+            <input type="password" class="form-control" th:field="*{password}" id="inputPassword"
+                   placeholder="Password">
+        </div>
+
+        <div class="buttonsContainer">
+            <input type="submit" class="btn btn-secondary btn-lg loginRegButton" value="Create profile">
+        </div>
+        </br>
+    </div>
+</form>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

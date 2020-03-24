@@ -1,0 +1,155 @@
+body
+{
+	margin: 0;
+	background-image: url("bg.png");
+	background-size: cover;
+	min-height: 600px;
+	background-attachment: fixed;
+	color: 	#000000;
+	font-family: 'Poiret One', serif;
+	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h1{
+	font-size: calc(17px + (26 - 17) * ((100vw - 300px) / (1600 - 300)));
+	text-align: center;
+	letter-spacing:  1px;
+	margin-bottom:0px;
+	margin-top:2px;
+}
+h2{
+	font-size: calc(22px + (34 - 22) * ((100vw - 300px) / (1600 - 300)));
+	text-align: center;
+	letter-spacing:  1px;
+	margin-bottom:0px;
+	margin-top:2px;
+}
+h3{
+	font-size: calc(15px + (24 - 15) * ((100vw - 300px) / (1600 - 300)));
+	text-align: center;
+	letter-spacing:  1px;
+	margin-top:2px;
+}
+p
+{
+	font-weight: bold;
+	text-align: center;
+	letter-spacing:  2px;
+	margin-bottom:25px;
+	margin-top:5px;
+}
+a:hover {
+	color: #454545;
+	text-decoration: blink;
+	font-weight: bold;
+}
+
+.accountButton
+{
+	background-color: #E9EBEE;
+	border: 1px solid #747474;
+	border-radius: 2px;
+	filter: brightness(95%);
+	border-radius: 10px;
+	color: black;
+}
+
+.accountButton:hover
+{
+	filter: brightness(100%);
+	border: 1px solid #c3c5c8;
+}
+
+.mainContainer
+{
+	max-width: 800px;
+	min-height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 10px;
+}
+
+.buttonContainer
+{
+	width: 100%;
+}
+
+.iconContainer
+{
+	width: 25%;
+	display: inline-block;
+	float: left;
+}
+
+.textContainer
+{
+	float: left;
+}
+
+.typeButton
+{
+	width: 55%;
+	max-heigt: 60px;
+	background-color: #E9EBEE;
+	border: 2px solid #747474;
+	border-radius: 15px;
+	filter: brightness(95%);
+	cursor: pointer;
+	text-align: center;
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-left: 15px;
+	font-weight: bold;
+	color: black;
+}
+
+.typeButton:hover{
+	filter: brightness(100%);
+	border: 2px solid #c3c5c8;
+}
+
+/*login and register inputs*/
+
+input[type="button"]
+{
+	font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+input[type="submit"]
+{
+	font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+.form-control {
+	width: 90%;
+	font-weight: bold;
+	font-size: calc(15px + (21 - 15) * ((100vw - 300px) / (1600 - 300)));
+	height: 20%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.loginRegButton
+{
+	width: 40%;
+	max-height: 60px;
+	background-color: #E9EBEE;
+	border: 2px solid #747474;
+	border-radius: 15px;
+	filter: brightness(95%);
+	cursor: pointer;
+	text-align: center;
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-left: 15px;
+	color: black;
+}
+
+.loginRegButton:hover{
+	filter: brightness(100%);
+	border: 2px solid #c3c5c8;
+}
+

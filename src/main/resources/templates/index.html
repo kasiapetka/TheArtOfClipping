@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title> The art of clipping salon. </title>
+
+    <link rel="icon" href="../static/img/scissors.ico" type="image/x-icon" th:href="@{img/scissors.ico}"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Bootstrap 4.4.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{css/main.css}">
+
+    <script type="text/javascript">
+
+        function gentlemanServices()
+        {
+            $('#maleServices').removeClass('invisible');
+            $('#femaleServices').addClass('invisible');
+        }
+        function ladiesServices()
+        {
+            $('#femaleServices').removeClass('invisible');
+            $('#maleServices').addClass('invisible');
+        }
+    </script>
+
+
+</head>
+<body onload="ladiesServices()">
+<header>
+    <!––navigation bar for the page––>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
+        <a class="navbar-brand" href="/"><img src="../../static/img/scissors.png" width="30" height="30"
+                                              class="d-inline-block align-top" alt="" th:src="@{img/scissors.png}">
+            AoCSalon</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon pull-left"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/about">About</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <a class="btn btn-secondary pull-right accountButton" href="/user">
+                <h3><i class="fa fa-user-circle-o" aria-hidden="true"></i>Account</h3>
+            </a>
+
+        </div>
+    </nav>
+    <!––header, title of the page––>
+</header>
+
+<main>
+    <article>
+        <div class="jumbo jumbotron jumbotron-fluid" style="min-height: 100px">
+            <div class="container">
+                <h1>The art of clipping salon.</h1>
+                <p>Please choose the type of service.</p>
+            </div>
+        </div>
+        <div class="container mainContainer">
+            <div class="container buttonsContainer">
+                <button class="btn btn-secondary btn-lg typeButton" id="female" onclick="ladiesServices()">
+                    <h2>Ladies</h2>
+                </button>
+                <button class="btn btn-secondary btn-lg typeButton" id="male" onclick="gentlemanServices()">
+                    <h2>Gentlemen</h2>
+                </button>
+            </div>
+            <div class="services col d-flex justify-content-center">
+                <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" >
+                    <!--Table for female services-->
+                    <table class="table table-hover mb-0" id="femaleServices">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="service1 : ${servicesF}">
+                            <!--<td th:text="${service1.name}">Default Value 3 for name</td>-->
+                            <td><a th:text="${service1.name}" th:href="@{/rsvr/(id=${service1.id},date='')}"></a></td>
+                            <td th:text="${service1.price}">Default Value 3 for price</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!--Table for male services-->
+                    <table class="table table-hover mb-0" id="maleServices">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="service : ${servicesM}">
+
+                            <!--<td><a href="#" th:href="@{'/rsvr/' + ${service.id} + '-' +${service.name}}">View</a></td>-->
+                            <td><a th:text="${service.name}" th:href="@{/rsvr/(id=${service.id},date='')}"></a></td>
+                            <!--<td th:text="${service.name}"><a href="#" th:href="@{'/rsvr/' + ${service.id} + '-' +${service.name}}"></a></td>-->
+                            <td th:text="${service.price}">Default Value 3 for price</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+    </article>
+</main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
